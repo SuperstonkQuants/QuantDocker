@@ -1,0 +1,11 @@
+channels:
+- conda-forge
+dependencies:
+- python=3.8.2
+- pip
+- pip:
+  - mlflow
+  - pytorch-lightning
+  - ax-platform
+  - torch>=1.6.0
+  - torchvision
