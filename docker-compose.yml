@@ -11,24 +11,13 @@ services:
       - "5432:5432"
     volumes:
       - ./postgres-store:/var/lib/postgresql/data
-  mlflow:
-    build:
-      context: ./mlflow-master
-    expose: 
-      - "5000"
-    ports:
-      - "5000:5000"
-    depends_on: 
-      - postgres
   notebook:
     build:
       context: ./all-spark-notebook
     ports:
       - "8888:8888"
     depends_on: 
-      - mlflow
-    environment: 
-      MLFLOW_TRACKING_URI: 'http://mlflow:5000'
+      - postgres
     volumes: 
       - file-store:/home/quants
 volumes:
