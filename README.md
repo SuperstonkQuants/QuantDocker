@@ -2,7 +2,7 @@
 
 ### An All in One Quant Docker Featuring:
 
-Jupyter Notebook Python, Scala, R, Spark
+Jupyter Notebook Python, Scala, R, Spark and a PreConfigured Postgres Database!
 
 featuring the following python packages:
 
